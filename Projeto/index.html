@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal | SinFTE</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https:cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/Dash.css">
+    <link rel="stylesheet" href="css/Osklenpopap.css">
+    <link rel="stylesheet" href="css/Graficos.css">
+    <link rel="stylesheet" href="css/popapsenha.css">
+
+
+
+
+</head>
+
+<body>
+
+    <nav>
+
+        <div>
+            <b href="#" class="logo">
+                <img id=logo class="logo" src="img/seta sin fte.png" alt=""/>
+                <img id=logofte class="logofte" src="img/sin[fte]-logo-positivo-rgb.png"/>
+            </b>
+        </div>
+        <ul class="menu">
+            <li class="active"><a href="index.html">
+                    <i class='bx bxs-dashboard'></i>
+                    <span class="nav-item">Dashboard</span>
+                </a></li>
+
+
+
+            <li><a >
+                    <i class='bx bxs-key'></i>
+                    <span class="nav-item" id="open" >Senha</span>
+
+
+
+                    <div id="fade" class="hide"></div> <!-- conteudo que fica de fundo parede  -->
+                    <div id="modal" class="hide"> <!--BLOCO DIV POPAP-->
+                        <div class="modal-header">
+                            <button id="close">X</button>
+                            <h2 class="popaph2">Alterar Senha</h2>
+                            <label for="" >Senha Atual</label>
+                            <input type="text"/>
+                            <label for="">Nova Senha</label>
+                            <input type="text"/>
+                            <label for="">Confirmar Nova Senha</label>
+                            <input type="text"/>
+
+                        </div>
+                    </div>
+                </a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <li><a href="#">
+                    <i class='bx bxs-detail'></i>
+                    <span class="nav-item">Relatórios</span>
+                </a></li>
+            <li><a href="#">
+                    <i class='bx bxs-cog'></i>
+                    <span class="nav-item">Configurações</span>
+                </a></li>
+            <li><a href="../Telalogin/Login.html" class="logout">
+                    <i class='bx bx-exit'></i>
+                    <span class="nav-item">Sair</span>
+                </a></li>
+        </ul>
+    </nav>
+    <main class="container">
+        <div class="box">
+            <h1>Aramis</h1>
+            </br>
+            <p>Terminais online</p>
+            <h2>63</h2>
+            </br>
+            <p>Terminais offline</p>
+            <h3>07</h3>
+        </div>
+        <div class="box">
+            <h1>Cotton</h1>
+            </br>
+            <p>Terminais online</p>
+            <h2>52</h2>
+            </br>
+            <p>Terminais offline</p>
+            <h3>03</h3>
+        </div>
+        <div class="box">
+            <h1>Intimissimi</h1>
+            </br>
+            <p>Terminais online</p>
+            <h2>72</h2>
+            </br>
+            <p>Terminais offline</p>
+            <h3>12</h3>
+        </div>
+    </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <section id="dashboard">
+        
+        <div class="grafcdinamic" >
+            <i class='bx bxs-file-doc' id="img"></i>
+        </div>
+        <div class="excel">
+            <i class='bx bxs-bar-chart-square' id="img2"></i>
+        </div>
+        <div class="h3text">
+            <h3 style="color: black;">Indicadores</h3>
+            
+        </div>
+        <div id="filtroDiario">
+            <select id="selectHoje">
+                <option value="hoje"> HOJE</option>
+                <option value="semanaPassada"> ESTA SEMANA</option>
+                <option value="semanaPassada"> SEMANA PASSADA</option>
+                <option value="semanaPassada"> MÊS PASSADO</option>
+            </select>
+        </div>
+
+        <div class="DivPedro">
+            <h2 class="hoje">HOJE:</h2>
+
+            <!--CRIAÇAO  POPAP Osklen-->
+
+
+            <button id="buttonOsklen">Osklen</button><!--Botao de abrir-->
+
+            <div id="Parede" class="hide"></div> <!-- conteudo que fica de fundo parede  -->
+
+            <div id="BlocoParede" class="hide"> <!--BLOCO DIV POPAP  e o conteudo dentro!-->
+                <div class="parede-header">
+                    <button id="closex">X</button><!-- botao fechar  -->
+                    <h2 class="hist">historico</h2>
+                </div>
+            </div>
+
+
+            <div id="Intimissimi">
+                <h4>Intimissimi</h4>
+            </div>
+            <div id="Aramis">
+                <h4>Aramis</h4>
+            </div>
+            <div id="Cotton">
+                <h4>Cotton</h4>
+            </div>
+        </div>
+
+        <div class="graficoindica">
+            <canvas id="myChart" width="1500" height="800"></canvas>
+        </div>
+
+    </section>
+
+
+
+
+    <script src="js/popapSenha.js"></script>
+    <script src="js/input.js"></script>
+    <script src="js/Osklenpopap.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/Graficos.js"></script>
+
+
+
+
+
+    <!---<div class="main">
+        <canvas class="line-chart" id="line-chart"></canvas>
+        </div>--->
+</body>

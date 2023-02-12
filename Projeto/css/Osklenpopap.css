@@ -1,0 +1,136 @@
+*{
+    font-family: helvetica;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+/*O body do popap*/
+
+body{
+    padding: 1rem;
+
+}
+
+
+
+
+/*bloco preto que fica encima do dash e abaixo do popap parede pretaaaa*/
+#Parede{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 5;
+}
+
+
+
+/*O popap*/
+
+#BlocoParede{
+    position: fixed;
+    left: 50%;
+    top:9%;
+    background-color: #e7ecf2;
+    z-index: 10;
+    transform: translate(-50%,50%);
+    width: 800px;
+    max-width: 90%;
+    padding: 100px;
+    border-radius: 50px;
+
+}
+
+/*h2 de dentro do popap*/
+.hist{
+    margin-top: 1rem;
+    color: #193553;
+}
+
+
+/*cabeçalho do popap de dentro*/
+.parede-header{
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+}
+
+
+
+
+
+/*botao  que inicia o popap*/
+#buttonOsklen{
+    background-color: rgb(3, 157, 216);
+    margin: 0;
+    background-color: rgb(3, 157, 216);
+    border-radius: 8px;
+    height: 80px;
+    width: 180px;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    
+}
+/*efeito do botao inicia popap*/
+#buttonOsklen:hover{
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgb(85, 85, 85);
+}
+
+
+
+
+
+
+
+
+
+/*botao dentro do popap*/
+#closex{
+    background-color: #193553;
+    margin: 0;
+    background-color: #193553;
+    border-radius: 8px;
+    height: 80px;
+    width: 180px;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+}
+
+
+
+
+
+
+
+
+
+/*O COMANDO A BAIXO FAZ COM QUE A PAREDE E A DIV SUMA quando clicada em algum lugar, e mostra os elementos da tela normal*/
+#BlocoParede.hide,
+#Parede.hide{
+    opacity:0;
+    pointer-events: none;
+}
+
+
+
+/*os codigos abaixo faz o que o bloco tenha uma animação sutil*/
+#Parede, #BlocoParede{
+    transition: 0.5s;
+    opacity: 1;
+    pointer-events: all;
+}
+
+
+/*os codigos abaixo faz o que o bloco tenha uma animação sutil*/
+#BlocoParede.hide{
+    top:0;
+
+}
